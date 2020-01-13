@@ -1,10 +1,10 @@
 
-public class CamelCase {
+public class Challenge {
 	public static void main(String[] args) {
-		countCamelCase("thisContainsFourWords");
+		countWords("thisContainsFourWords");
 	}
 	
-	public static void countCamelCase(String str) {
+	public static int countWords(String str) {
 		int count = 0;
 		if (Character.isUpperCase(str.charAt(0))) {
 			count++;
@@ -14,7 +14,6 @@ public class CamelCase {
 				count++;
 			}
 		}
-		System.out.println("haha");
-		System.out.println(count);
+		return count;
 	}
 }
