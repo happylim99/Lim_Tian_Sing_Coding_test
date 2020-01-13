@@ -1,7 +1,10 @@
 
 public class Challenge {
 	public static void main(String[] args) {
-		countWords("thisContainsFourWords");
+		int cw = countWords("thisContainsFourWords");
+		System.out.println(cw);
+		int cws = countWordsStream("thisContainsFourWords");
+		System.out.println(cws);
 	}
 	
 	public static int countWords(String inputstr) {
@@ -15,5 +18,9 @@ public class Challenge {
 			}
 		}
 		return count;
+	}
+	
+	public static int countWordsStream(String inputstr) {
+		return (int) inputstr.chars().filter((s)->Character.isUpperCase(s)).count();
 	}
 }
