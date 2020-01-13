@@ -4,13 +4,13 @@ public class Challenge {
 		countWords("thisContainsFourWords");
 	}
 	
-	public static int countWords(String str) {
+	public static int countWords(String inputstr) {
 		int count = 0;
-		if (Character.isUpperCase(str.charAt(0))) {
+		if (Character.isUpperCase(inputstr.charAt(0))) {
 			count++;
 		}
-		for (int i=0; i<str.length(); i++) {
-			if(Character.isUpperCase(str.charAt(i))) {
+		for (int i=0; i<inputstr.length(); i++) {
+			if(Character.isUpperCase(inputstr.charAt(i))) {
 				count++;
 			}
 		}
